@@ -1,3 +1,5 @@
+#**DO NOT USE - NOT READY**
+
 # dotfiles
 
 ### Packages
