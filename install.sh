@@ -122,6 +122,19 @@ install_valet() {
     valet install
 }
 
+install_nodejs() {
+    sudo apt-get install python-software-properties
+    curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
+    sudo apt-get install nodejs
+
+}
+
+install_yarn() {
+    sudo apt-key adv --keyserver pgp.mit.edu --recv D101F7899D41F3C3
+    echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+    sudo apt-get update && sudo apt-get install yarn
+}
+
 # Symlinks
 symlink "zsh/zshrc" "zshrc"
 symlink "oh-my-zsh" "oh-my-zsh"
